@@ -11,7 +11,7 @@
     "axios": "^0.19.2",
     "bootstrap-vue": "2.15.0",
     "core-js": "^3.6.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "vee-validate": "^3.3.0",
     "vue": "^2.6.11",
     "vue-cookie": "^1.1.4",
