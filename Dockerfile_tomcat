@@ -1,0 +1,14 @@
+FROM tomcat:9.0.33-jdk11-corretto
+
+COPY . /home/gradle
+WORKDIR /home/gradle/src_front_end
+RUN curl -sL https://rpm.nodesource.com/setup_12.x | bash - \
+    && yum localinstall -y https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm \
+    && yum install -y nodejs mysql-community-client \
+    && npm install \
+    && npm run build \
+    && cd /home/gradle \
+    && ./gradlew build \
+    && mv ./build/libs/app.war /usr/local/tomcat/webapps/ROOT.war \
+    && rm -rf /var/cache/yum/* \
+    && rm -rf /home/gradle/*

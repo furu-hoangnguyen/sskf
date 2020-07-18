@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0b3112"],{2790:function(e,t,n){"use strict";n.r(t);var s=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("h1",[e._v("this iss request confirm settlement ")])},r=[],c={name:"ConfirmSettlement"},i=c,u=n("2877"),a=Object(u["a"])(i,s,r,!1,null,"5586e23a",null);t["default"]=a.exports}}]);
+//# sourceMappingURL=chunk-2d0b3112.04578c03.js.map

@@ -1,0 +1,83 @@
+@import "../_mixins.scss";
+.login-page {
+  width: 100%;
+  .title_login {
+    color: #000000;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-left: 3.75rem;
+    @include tablet(1.8125rem, null, null, null);
+  }
+  .main-login {
+    width: 100%;
+    max-width: calc(360px + 24px);
+    padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /deep/ .form-group {
+      margin-bottom: 20px;
+      label {
+        font-size: 1.25rem;
+        margin-bottom: 0rem;
+        color:#000000;
+        &.custom-control-label{
+          font-size: 1rem;
+          padding-left: 6px;
+          line-height: 1.5rem;
+          &::before,
+          &::after{
+            width: 1.5625rem;
+            height: 1.5625rem;
+            top: 0
+          }
+        }
+      }
+      input {
+        height: 50px;
+        width: 100%;
+        color: #000000;
+        background: #E5E5E5 0% 0% no-repeat padding-box;
+        border: 2px solid #00000066;
+        border-radius: 7px;
+        font-size: 1rem;
+        padding: 13px 0;
+        padding-left: 1.25rem;
+        &[type="password"] {
+          font-size: 1rem;
+          font: large Verdana,sans-serif;
+          letter-spacing: 1px;
+        }
+        &[type="checkbox"] {
+          height: 1.5625rem;
+        }
+      }
+      &.custom-control.custom-checkbox {
+        height: 1.5625rem;
+        margin-left: 7.5rem;
+      }
+    }
+    .btn_submit_login {
+      height: 40px;
+      min-width: 7.5rem;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      background-color: #00000066;
+      margin-top: 15px;
+    }
+    .logo_login{
+      position: fixed;
+      right: 8vw;
+      bottom: 8vh;
+    }
+  }
+  .label_error {
+    color: #DF6561;
+  }
+}

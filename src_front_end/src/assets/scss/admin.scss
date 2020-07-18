@@ -1,0 +1,517 @@
+.empbody {
+  width: 100%;
+  height: 100% !important;
+  // min-height: 100%;
+  overflow-y: hidden !important;
+  & > .header {
+    background-color: #E5E5E5;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #00000099;
+    height: 65px;
+    max-height: 65px;
+    line-height: 30px;
+    padding: 1rem 0;
+    padding-left: 1.5rem;
+  }
+  & > .controller {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 15px !important;
+    & > div {
+      &.filter-as-text{
+        font-size: 1rem;
+        padding-left: 2.1875rem;
+      }
+      & > p {
+        font-weight: 700;
+      }
+      & > span {
+        padding-left: 2rem;
+      }
+      & > button {
+        min-width: 8.125rem;
+        height: 3.125rem;
+        font-size: 1rem;
+        color: #44A5CC;
+        line-height: 20px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #44A5CC;
+        border-radius: 0;
+        padding: 0;
+        margin: 0 !important;
+        &:first-child {
+          margin-right: 30px !important;;
+        }
+      }
+    }
+  }
+  & > .employee{
+    width: 100%;
+    padding: 0 2.5rem;
+    height: 100%;
+    max-height: calc(100% - 145px);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: baseline;
+    & > div {
+      flex: 1 0 100%;
+      max-width: 100%;
+      &.filter {
+        height: auto;
+        float: none;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        select {
+          min-width: 5rem;
+          width: auto;
+          border-radius: 0;
+          border-color: #03030399;
+          &:nth-child(2) {
+            margin-left: 20px;
+          }
+        }
+      }
+      &.main-table {
+        padding-top: 0;
+        max-height: calc(100% - 90px);
+        overflow: hidden;
+        & > table {
+          max-height: 100%;
+          overflow: auto;
+          position: relative;
+          display: block;
+          width: 100%;
+          padding-left: 0;
+          border-collapse: separate;
+          border-spacing: 0;
+        }
+      }
+    }
+    .filter {
+      height: auto;
+      float: none;
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      select {
+        min-width: 5rem;
+        width: auto;
+        border-radius: 0;
+        border-color: #03030399;
+        &:nth-child(2) {
+          margin-left: 20px;
+        }
+      }
+    }
+    .main-table {
+      padding-top: 0;
+      max-height: calc(100% - 90px);
+      overflow: hidden;
+      & > table {
+        max-height: 100%;
+        overflow: auto;
+        position: relative;
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        border-collapse: separate;
+        border-spacing: 0;
+        td, th {
+          font-size: 0.75rem;
+          color: #000000;
+          font-weight: 400;
+          padding: .25rem;
+          height: 1.625rem;
+          width: auto;
+        }
+        tr:last-child {
+          td {
+            border-bottom: 1px solid grey;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+.master-table {
+  width: 55%;
+  padding: 1--vh 2vw 0 2vw;
+  td {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+  th {
+    background-color: lightgray;
+    font-size: 1rem;
+  }
+  .filter {
+    float: right;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 2.7rem;
+
+    select {
+      width: 30%;
+      margin-left: 2%;
+
+      &:nth-child(2) {
+        width: 12%;
+      }
+    }
+  }
+}
+
+/* .employee {
+  width: 100%;
+  padding: 1--vh 2vw 0 2vw;
+
+  .filter {
+    float: right;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 2.7rem;
+
+    select {
+      width: 11rem;
+      margin-left: 2%;
+
+      &:nth-child(2) {
+        width: 5rem;
+      }
+    }
+  }
+} */
+
+.searchAdminPopup {
+  .supplieName {
+    text-decoration: none;
+    font-size: 1.25rem;
+  }
+
+  .search_recordAdmin {
+    height: 30--vh;
+  }
+
+  .searchEmployee {
+    font-size: 1.1rem;
+    font-weight: 300;
+
+    label {
+      width: 12vw;
+      font-size: inherit;
+      text-align: left;
+      padding-left: 1vw;
+    }
+
+    select, input {
+      font-size: 1rem;
+      font-weight: inherit;
+    }
+  }
+
+  .searchEmployee_checkbox {
+    input {
+      width: 2rem;
+      height: 2rem;
+      display: inline-block;
+      margin-left: auto;
+    }
+
+    label {
+      &:nth-child(2) {
+        padding-left: 0;
+        position: relative;
+        top: .2rem;
+        left: 2.5rem;
+        font-size: 1.4rem;
+        white-space: nowrap;
+        width: 13rem;
+        display: inline-block;
+        margin-left: 0rem;
+      }
+    }
+  }
+
+  .searchproduct {
+    label {
+      width: 12rem;
+      padding-left: .5rem;
+    }
+    & > div {
+      width: calc(100% - 10rem);
+    }
+  }
+  .btn-filter {
+    height: 3.125rem;
+    min-width: 130px;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    &:not(:first-child) {
+      margin-left: 3.125rem;
+    }
+  }
+}
+
+.main-table {
+  width: 100%;
+  height: auto;
+  padding-top: 1rem;
+  table {
+    // max-height: calc(86.5--vh - 12rem);
+    overflow: scroll;
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    tr td, tr th {
+      max-width: 350px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: white;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 300;
+      border-top: 1px solid grey;
+      height: 1.75rem;
+      &:nth-child(1), &:nth-child(2) {
+        position: relative;
+        z-index: 2;
+      }
+
+    }
+    //tr td span{
+    //  width: 100%;
+    //  white-space: nowrap;
+    //  overflow: hidden;
+    //}
+    tr th {
+      background-color: #E5E5E5;
+      padding: .2rem .5rem;
+      font-weight: 600;
+      height: 3rem;
+    }
+
+    &::-webkit-scrollbar {
+      border-radius: 10px;
+      height: .7rem;
+      width: .7rem;
+      position: relative;
+      top: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: grey;
+      border-radius: 10px !important;
+    }
+  }
+  .relative-pos {
+    position: relative;
+  }
+
+  .has-border {
+    border-right: 1px solid grey;
+  }
+}
+
+.table_store {
+  display: block;
+  width: 80%;
+  padding-top: 0;
+
+  table {
+    padding-left: 0;
+    width: auto;
+    float: right;
+
+    tr td, tr th {
+      border-top: 1px solid grey;
+      min-width: 200px;
+      @include reponsivelm(null, null, 150px, .7rem);
+
+      &:nth-child(1), &:nth-child(2) {
+        position: relative;
+        left: 0;
+        display: table-cell;
+        border-right: none;
+      }
+    }
+  }
+}
+
+.table_adminApproval {
+  width: 27%;
+  @include reponsivelm(null, 31%, null, null);
+  .filter {
+    select {
+      width: 50%;
+      &:nth-child(2){
+        width: 20%;
+      }
+    }
+  }
+  table{
+    tr td, tr th{
+      padding: 0;
+      min-width: 170px;
+      @include reponsivelm(null, null, 140px, null);
+      &:nth-child(3){
+        width: 100px;
+        min-width: auto;
+      }
+    }
+  }
+}
+.approval_main{
+  height: calc(100% - 10rem);
+  @extend .customScrollBar ;
+  overflow-y: auto;
+  .approval_flow{
+    width: 71%;
+    @include reponsivelm(null,67%, null, null);
+    margin-left: 2%;
+    background-color: #E5E5E5;
+    .table_adminApproval_r{
+      .table_adminApproval_h{
+        background-color: white;
+        font-size: .8rem;
+        box-shadow: 0 2px grey;
+        text-align: center;
+        font-weight: 300;
+        &:nth-child(2){
+          width: 80%;
+          margin: 0 auto;
+          text-align: left;
+        }
+
+      }
+    }
+
+  }
+}
+.implement_approval{
+  .employee{
+    width: auto;
+    padding: 0 .3rem 0 0;
+    position: relative;
+    flex: 0 !important;
+    max-width: initial !important;
+    .filter{
+      width: auto;  
+      height: auto;
+      padding-right: 0.7rem;
+      select{
+        font-size: .75rem;
+        border-radius: 0;
+        border: 1px solid grey;
+        font-weight: 700;
+      }
+    }
+    .main-table table tr td, .main-table table tr th{
+      padding: 0 .2rem;
+      font-size: .75rem;
+      max-width: 7.5rem;
+      min-width: 7.5rem;
+      &:last-child{
+        max-width: 7.5rem;
+        min-width: 7.5rem;
+      }
+    }
+    .main-table table tr{
+      position: relative;
+    }
+    .main-table table tr th{
+      height: 2.25rem;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    .main-table{
+      padding: 0;
+      width: auto;
+      overflow-y: auto;
+      overflow-x: visible;
+      @extend .customScrollBar;
+    }
+  }
+  .approval_modal{
+    font-weight: 700;
+    font-size: .65rem;
+    width: 8rem;
+    margin-left: .5rem;
+    .head{
+      border-bottom: 1px grey solid;
+      background-color: white;
+    }
+    .body_head{
+      margin: .5rem 0 .5rem 0;
+    }
+    .body_foot {
+      margin-top: .7rem;
+    }
+    .body{
+      width: 80%;
+      border-bottom: 1px grey solid;
+      background-color: white;
+    }
+  }
+  .approve_diagram{
+    margin-top: 2rem;
+    padding: .5rem .5rem;
+    background-color: #E5E5E5;
+    flex: auto !important;
+    max-height: calc(100% - 90px);
+  }
+  .body_record{
+    width: 100%;
+    height: auto;
+    max-height: 9.2rem;
+    overflow-y: auto;
+    @extend .customScrollBar ;
+  }
+}
+.search_position{
+  label{
+    width: 10vw !important;
+    text-align: right !important;
+    padding-right: 1vw;
+  }
+}
+.checkbox_searchFlow{
+  input{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  label{
+    font-size: 1.1rem;
+    position: relative;
+    top: .2rem;
+    width: 90%;
+    padding-left: 10%;
+  }
+}
+.setSize{
+  height: 4rem;
+  width: 10rem;
+}

@@ -1,0 +1,358 @@
+.main-header {
+  height: 4rem;
+  background-color: $header-color;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  div {
+    display: flex;
+    align-items: center;
+    line-height: 1.5rem;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    p {
+      font-size: 1.2rem;
+      padding-left: 12%;
+      width: 11rem;
+    }
+    .tabletNav{
+      width: 13rem;
+      justify-content: space-around;
+      background: #707070 0% 0% no-repeat padding-box;;
+      margin: 0 .5rem;
+      font-weight: 400;
+      font-size: 1.5rem;
+      span {
+        background-color: $color-red;
+        padding: 0 .4rem;
+        float: right;
+        text-align: center;
+      }
+    }
+  }
+  .dropdownUser{
+    margin-right: 8%;
+  }
+  .header_tablet{
+    margin-right: 3rem !important;
+  }
+  button {
+    background-color: $dropdown-color;
+    height: 100%;
+    width: 14rem;
+    color: inherit;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //font-size: 1.2rem;
+    font-weight: 400;
+    &:hover {
+      color: white;
+    }
+    span{
+      width: 9rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  i {
+    font-size: 1.4rem;
+    &:first-child {
+      // padding-left: 0.7rem;
+      font-size: 2.3rem;
+    }
+  }
+  .iconUser {
+    font-size: 1.7rem;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    border: none;
+    right: 0 !important;
+    li {
+      text-align: center;
+      background-color: $nav-color;
+      margin: 0.1rem 0;
+      padding: 0.3rem 0.35rem;
+    }
+  }
+  .dropdown-item {
+    color: white;
+    font-size: 1rem;
+  }
+}
+.main-body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 4rem);
+  .main-content {
+   height: 100%;
+    width: calc(100% - 12rem);
+    min-width: calc(100% - 12rem);
+    overflow: hidden;
+    transition: all 0.7s;
+    position: relative;
+    margin: 0 auto;
+  }
+  .main-nav {
+    font-size: .8rem;
+    height: 100%;
+    width: 12rem;
+    color: white;
+    background-color: #666666;
+    position: relative;
+    transition: all 0.7s;
+    .collapsebtn {
+      height: 1.9rem;
+      width: 1.9rem;
+      z-index: 1;
+      position: absolute;
+      bottom: 3%;
+      right: -0.8rem;
+      border-radius: 50%;
+      border: 1px solid $nav-color;
+      background-color: white;
+      color: $nav-color;
+      &:hover {
+        color: $nav-color !important;
+      }
+    }
+    .main-nav_item {
+      padding: 7% 15% 7% 23%;
+      text-align: left;
+      position: relative;
+      border-bottom: 0.1px solid rgb(139, 138, 138);
+    }
+    .homeNav {
+      @extend .main-nav_item;
+      height: 14vh;
+      display: flex;
+      font-weight: 700;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 24%;
+      font-size: 1rem;
+      i {
+        font-size: 5vh;
+      }
+    }
+    .request {
+      @extend .main-nav_item;
+      font-size: inherit;
+      font-weight: 700;
+      i {
+        font-size: 1.3rem;
+        margin: 0 0.2rem;
+        position: relative;
+        top: 0.12rem;
+      }
+    }
+    .main-nav_function {
+      @extend .main-nav_item;
+      font-size: inherit;
+      span{
+        background-color: $color-red;
+        padding: 0 .4rem;
+        float: right;
+        text-align: center;
+        border-radius: 4px;
+      }
+    }
+    div {
+      cursor: pointer;
+    }
+  }
+}
+.collapseNav .main-nav {
+  margin-left: -10.7rem;
+  background-color: #666666;
+}
+.collapseNav .main-content {
+  width: calc(100%- 1.3rem);
+  min-width: calc(100% - 1.3rem);
+}
+.activeNav::before {
+  content: "";
+  height: 100%;
+  width: 13%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(197, 83, 83);
+}
+.activeNav {
+  font-size: 1.1rem !important;
+  i{
+    font-size: 1.7rem !important;
+  }
+  .fa-home{
+    font-size: 5.5vh !important;
+  }
+}
+.active_function{
+  font-size: .95rem !important;
+  background-color: white;
+  color: grey;
+  span{
+    color: white;
+  }
+}
+.active_function:before {
+  @extend .activeNav::before;
+  width: 4%;
+  left: 9%;
+}
+.active_tablet::before {
+  content: "";
+  height: 0.4rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(197, 83, 83);
+}
+.home_tablet{
+  background: #707070 0% 0% no-repeat padding-box;;
+  white-space: nowrap;
+    width: 15rem;
+}
+@media only screen and (max-width: 1024px) {
+  .main-body {
+    .main-content {
+      width: 100%;
+    }
+  }
+}
+.fixScroll{
+  height: 85vh;
+  overflow-y: scroll;
+  padding-bottom: 20rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.pagination{
+  float: right;
+  .page-item{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position:relative;
+    margin: 0 .3rem;
+    :after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $header-color;
+      height: 1px;
+      width: auto;
+      z-index: 2;
+    }
+  }
+  .page-item .page-link{
+    width: auto;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0;
+    outline: none;
+    border: none;
+    color: $header-color;
+    &:hover{
+      color: $header-color;
+    }
+  }
+  .pagiClass{
+      font-size: 1.5rem !important;
+      font-weight: 900;
+  }
+  .page-item.active .page-link{
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: grey;
+  }
+}
+.main-vselect{
+  height: 2rem;
+  width: 100%;
+  background-color: white;
+  .vs__actions{
+    button{
+      display: none;
+    }
+    z-index: 1;
+    background: white;
+    
+  }
+  .vs__selected{
+    margin: 0;
+    height: 2rem;
+    overflow: hidden;
+  }
+  .vs__selected-options{
+    height: 2rem;
+    width: 60%;
+    flex-wrap: nowrap;
+  }
+  .vs__selected-options {
+    input{
+      border: none;
+      width: 0;
+      padding: 0;
+    }
+    input:disabled{
+      display: none;
+    }
+  }
+
+  .vs__dropdown-toggle{
+    height: 100%;
+    border-radius: 0;
+    border: 1px solid grey;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border: 1px solid grey;
+    border-radius: 0;
+    padding: 0 0 0 0.8rem;
+    min-height: 1.95rem;
+    white-space: nowrap;
+    
+  }
+}
+.customScrollBar{
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    height: .7rem;
+    width: .7rem;
+    position: relative;
+    top: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 10px !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 10px !important;
+  }
+}
+.commonLabel{
+  height: 2rem !important;
+  width: 9rem !important;
+  background-color: grey !important;
+  color: white !important;
+  font-size: .75rem !important;
+  line-height: 2rem !important;
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

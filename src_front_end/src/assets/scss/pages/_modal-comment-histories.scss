@@ -1,0 +1,90 @@
+#old-comments-modal {
+  .modal-content {
+    background: transparent;
+    border: none;
+  }
+  .history-comment {
+    min-width: 50rem;
+    max-width: 50rem;
+    background: #fff;
+    & > div:not(.comment-tooltip){
+      margin: auto !important;
+      max-width: calc(35rem + 26px);
+      & > .popup-title{
+        padding-top: 4.375rem;
+        font-size: 1rem;
+        color: #030303;
+      }
+      & > .container-record {
+        min-height: 18.75rem;
+        max-height: 18.75rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 26px;
+        position: relative;
+        .search_record {
+          min-height: 18rem;
+          max-width: 35rem;
+          border: 1px solid #707070;
+          padding-left: 30px;
+          padding-right: 34px;
+          padding-top: 6px;
+          margin-left: auto;
+          .comment-item {
+            font-size: 1rem;
+            padding: 9px 0;
+            height: auto;
+            align-self: flex-start;
+            .comment-history-item {
+              white-space: nowrap;
+              max-width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              margin: 0;
+            }
+          }
+        }
+        &.customScrollBar::-webkit-scrollbar-thumb {
+          background: #707070;
+        }
+        &.customScrollBar::-webkit-scrollbar-track{
+          background: #0000001A;
+        }
+      }
+      & > .btn-close {
+        padding-top: 30px;
+        padding-bottom: 21px;
+        max-width: 35rem;
+        & > button {
+          height: 50px;
+          text-align: center;
+          width: 10.3125rem;
+        }
+      }
+    }
+  }
+  .comment-tooltip {
+    opacity: 1;
+    max-width: 35rem !important;
+    background: #fff;
+    .tooltip-inner {
+      overflow: auto;
+      max-height: 100px;
+      max-width: 100% !important;
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+      border-radius: 4px !important;
+      padding: 10px !important;
+      background-color: #0000004D !important;
+      text-align: left;
+    }
+    &[x-placement^="top"] .arrow::before {
+      border-top-color: #0000004D !important;
+      border-width: 0.7rem 0.5rem 0;
+    }
+    &[x-placement^="bottom"] .arrow::before {
+      border-bottom-color: #0000004D !important;
+      border-width: 0 0.5rem 0.7rem;
+    }
+  }
+}

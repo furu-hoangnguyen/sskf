@@ -1,0 +1,58 @@
+@mixin padding($position: null, $padSize...) {
+  @if $position {
+    @if $position == 'top' {
+      padding-top: $padSize;
+    } @else if $position == 'right' {
+      padding-right: $padSize;
+    } @else if $position == 'bottom' {
+      padding-bottom: $padSize;
+    } @else if $position == 'left' {
+      padding-left: $padSize;
+    }
+  } @else if ($padSize && $padSize != 0) {
+    @each $var in $padSize {
+        padding: #{$var};
+    }
+  }
+}
+
+@mixin tablet($fontsize: 1rem,
+  $padding: null,
+  $margin: null,
+  $height: null,
+  $width: null,
+  $minheight: null,
+  $minwidth: null,
+  $maxheight: null,
+  $maxwidth: null
+){
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+    font-size: $fontsize;
+    @if ($padding) {
+      padding: $padding;
+    }
+    @if ($margin) {
+      margin: $margin;
+    }
+    @if ($height) {
+      height: $height;
+    }
+    @if ($width) {
+      width: $width;
+    }
+    @if ($minheight) {
+      min-height: $minheight;
+    }
+    @if ($minwidth) {
+      min-width: $minwidth;
+    }
+    @if ($maxheight) {
+      max-height: $maxheight;
+    }
+    @if ($maxwidth) {
+      max-width: $maxwidth;
+    }
+  }
+}

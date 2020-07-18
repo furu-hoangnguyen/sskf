@@ -1,0 +1,58 @@
+.disabledClass{ 
+  & > div{
+    background-color: #E5E5E5;
+    .vs__actions , .vs__actions svg{
+      background-color: #E5E5E5 !important; 
+    }
+  }
+  .vs__dropdown-toggle{
+    background-color: #E5E5E5 !important; 
+  }
+  cursor: not-allowed;
+}
+// .form-control:disabled{
+//   background-color: #E5E5E5 !important; 
+// }
+.requestTablet{
+  .label_input{
+    & > div {
+      // height: 1.67777 rem;
+      label{
+        width: 10rem;
+      }
+    }
+  }
+  .request-body{
+    padding: 0 4rem !important;
+  }
+}
+.impletment_store{
+  table {
+    tr th{
+      &:nth-child(1){
+        width: 35.388888rem;
+      }
+      &:nth-child(2){
+        width: calc(52rem - 35.388888rem);
+      }
+    }
+  }
+}
+.date_disabled > div{
+  background-color: #E5E5E5 !important; 
+}
+.tablet_lg{
+  width: 25.4444rem !important;
+}
+.tablet_xxl{
+  width: 52rem !important;
+}
+.tablet_xl{
+  width: calc(52rem - 25.4444rem) !important;
+}
+.tablet_marginLeft{
+  margin-left: calc(52rem - 50.8888rem);
+}
+.tablet_marginRight{
+  margin-right: calc(52rem - 50.8888rem);
+}

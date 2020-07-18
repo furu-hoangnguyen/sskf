@@ -1,0 +1,128 @@
+.mx-datepicker{
+  width: 100%;
+  height: 100%;
+  .mx-input-wrapper{
+    min-height: 3.2vh;
+  }
+}
+.account-create .vs__dropdown-toggle{
+  border: 1px solid #ced4da;
+  min-height: 0;
+}
+.commentSidebar .b-sidebar-backdrop {
+  background-color: #fff;
+}
+.autoCompleteClass{
+  .vs__actions{
+    display: none;
+  }
+}
+.setHeightThTable{
+  height: 2.3rem;
+}
+
+.invalidClass{
+  background-color: $color-red;
+  input{
+    border: 1px solid $color-red !important;
+  }
+}
+.btn_getSupply{
+  font-size: 1rem;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 6px;
+}
+.fieldPayment{
+  & > div{
+    width: 100%;
+    border: none;
+  };
+  input{
+    border:none;
+    padding: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: right;
+  }
+}
+.fieldDependent{
+  .label_input > div {
+    width: 100%;
+  }
+}
+.invalidClassTable{
+  border: 1px solid #FF0000 !important;
+}
+.mx-input:disabled, .mx-input.disabled{
+  cursor: not-allowed;
+  border: 1px solid #00000099;
+  background-color: #E5E5E5 !important;
+}
+.invalidTextarea{
+  background-color: white;
+  border: 1px solid #df6561;
+  label{
+    background-color: #df6561;
+  }
+}
+.invalidClassSelect{
+  background-color: #df6561;
+  .main-vselect .vs__dropdown-toggle{
+    border: 1px solid #df6561;
+  }
+}
+.widthFieldAccountRequest{
+  width: 18.75rem;
+}
+.heightFieldAccountRequest{
+  height: 1.5625rem;
+}
+.fixDragFile{
+  input[type = file]{
+    height: 10rem !important;
+  }
+  .file-container{
+    display: flex;
+    align-items: center;
+  }
+}
+.receivableAmountsClass{
+  margin-right: 24rem;
+  vertical-align: middle;
+}
+.errorsMessagesField{
+  div{
+    color: $color-red;
+  }
+}
+.tooltip .tooltip-inner{
+  font-weight: 400;
+}
+.customTooltip{
+  position: fixed;
+  z-index: 1000;
+  height: 2rem  ;
+  width: 10rem;
+  background-color: #3d94b7;
+}
+.dataTableFooter{
+  padding: 2px !important;
+  & > div {
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 2px !important;
+    background-color: #E5E5E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.footerColor{
+  padding: 2px !important;
+  height: calc(1.5em + 0.75rem + 2px);
+  input{
+    background-color: #E5E5E5;
+    padding: 2px !important;
+  }
+  
+}

@@ -1,0 +1,7 @@
+package sskf.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import sskf.model.entity.ImplementationStoresForRequestMannequinPromotionEntity;
+
+public interface ImplementationStoresForRequestMannequinPromotionRepository extends JpaRepository<ImplementationStoresForRequestMannequinPromotionEntity, Long> {
+}

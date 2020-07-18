@@ -1,0 +1,189 @@
+.request {
+  height: 100%;
+  .request-header {
+    width: 100%;
+    height: 4.1875rem;
+    z-index: 1;
+    background-color: rgba(197, 194, 194, 0.397);
+    border-bottom: 1px solid #00000099;
+    .request-header-container {
+      position: relative;
+      display: flex;
+      flex-wrap: nowrap;
+      padding-left: 1.5625rem;
+      align-items: center;
+      height: 100%;
+      .title {
+        flex-grow: 1;
+        display: inline-flex;
+        align-items: center;
+        h4 {
+          font-size: 1.25rem;
+          font-weight: 700;
+        }
+        div.number {
+          margin-left: 1.8rem;
+          .application-num,
+          .payment-num {
+            text-align: left;
+            font-size: 0.75rem;
+            color: rgb(33, 37, 41);
+            display: block;
+          }
+        }
+        div.icon{
+          margin-left: 1rem;
+          i {
+            font-size: 1.25rem;
+          }
+        }
+      }
+      .request-header_status {
+        margin-right: 1rem;
+        margin-top: 1rem;
+        align-self: flex-start;
+        width: 5rem;
+        height: 5rem;
+        max-width: 5rem;
+        max-height: 5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        background: #fff;
+        color: #44A5CC;
+        border: 2px solid #44A5CC;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        &.send-back {
+          border-color: #DF6561;
+          background: #DF6561;
+          color: #fff;
+        }
+        & > div {
+          span {
+            &:last-child {
+              white-space: nowrap;
+            }
+            &:first-child {
+              white-space: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+  .request-body{
+    padding-left: 1.5625rem;
+    padding-bottom: 13rem;
+    overflow: auto;
+    height: calc(100% - 4.1875rem);
+    .errors-messages-container {
+      color: #df6561;
+    }
+    .purpose-container {
+      display: flex;
+      width: 100%;
+      max-width: 100%;
+      justify-content: space-between;
+      & > * {
+        flex: 1 0 50%;
+        max-width: 100%;
+        &.other-purpose {
+          /deep/ .form-group.label_input {
+            height: 100%;
+            & > div {
+              width: 100%;
+              input {
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .other-payment-method {
+      margin-left: -15px;
+    }
+    .table_payment {
+      td {
+        padding: 0;
+        /deep/ .fieldPayment {
+          input {
+            padding: 0 0.5rem;
+          }
+          &.change-value input{
+            background: #FCE655;
+          }
+        }
+      }
+    }
+    /deep/ .label_input {
+      .mx-datepicker .mx-input-wrapper {
+        position: unset;
+      }
+      .vs__selected-options {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      input:disabled {
+        color: #030303 !important;
+        cursor: not-allowed;
+      }
+      .form-control-plaintext{
+        padding: 0.375rem 0.75rem;
+        background: #fff;
+        outline: none;
+      }
+    }
+    /deep/ .table-container .table > tbody > tr > td {
+      &[data-field="storeGNm"] {
+        min-width: 10rem !important;
+        max-width: 10rem !important;
+      }
+      &[data-field="hinmokuRnm"] {
+        min-width: 11.25rem !important;
+        max-width: 11.25rem !important;
+      }
+    }
+  }
+  .request-footer.btnForRequest {
+    display: flex;
+    position: absolute;
+    bottom: 3%;
+    z-index: 99;
+    width: 100%;
+    button {
+      min-width: 130px;
+      font-size: 1rem;
+      height: 50px;
+      padding: 0;
+    }
+  }
+  /deep/.change-value {
+    background: #FCE655;
+  }
+}
+.requestTablet{
+  .request-header .request-header-container{
+    padding-left: 1.2rem;
+    align-items: flex-end;
+    .title{
+      font-size: 1.2rem;
+      div.number{
+        margin-left: 1rem;
+        label{
+          font-size: 1rem !important;
+          margin: 0;
+        }
+      }
+    }
+    .request-header_status{
+      width: 4.5rem !important;
+      height: 4.5rem !important;
+      margin-right: 2px;
+    }
+  }
+}

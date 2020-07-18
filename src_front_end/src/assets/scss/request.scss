@@ -1,0 +1,847 @@
+.createAcount-header {
+  width: 100%;
+  height: 4.1875rem;
+  z-index: 1;
+  background-color: rgba(197, 194, 194, 0.397);
+  border-bottom: 1px solid grey;
+  .createAcount-header_account {
+    width: 50%;
+    height: 100%;
+    float: left;
+    div {
+      height: 100%;
+      float: left;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      &:first-child {
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin: 0 1rem;
+      }
+    }
+    label{
+        font-weight: 500;
+        font-size: .75rem;
+      
+    }
+  }
+  .createAcount-header_status {
+    width: 20%;
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    .createAcount-header_status_item {
+      margin-right: 1rem;
+      margin-top: 1rem;
+      align-self: flex-start;
+      width: 5rem;
+      height: 5rem;
+      max-width: 5rem;
+      max-height: 5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      background: #fff;
+      color: #44A5CC;
+      border: 2px solid #44A5CC;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+  }
+}
+.label_input_header {
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  div {
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  i {
+    font-size: 1.2rem;
+  }
+}
+.btn_grey {
+  background-color: grey;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+  padding: 0;
+  font-size: 0.6rem;
+  &:hover {
+    color: white;
+  }
+}
+.label_input {
+  margin: 0;
+  font-size: .75rem;
+  display: flex;
+  flex-direction: row;
+  & > div {
+    padding: 0;
+    width: calc(100% - 9rem);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: white;
+  }
+  label {
+    width: 9rem;
+    height: 2rem;
+    background:#707070 0% 0% no-repeat padding-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex !important;
+  }
+  input,
+  select {
+    width: 100%;
+    float: right;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border: 1px solid grey;
+    border-radius: 0;
+    height: 2rem;
+    &:focus {
+      border-color: grey;
+      box-shadow: none;
+    }
+  }
+  .label_input{
+    height: 2rem;
+    margin-right: 1px;
+  }
+}
+.label_textarea {
+  background: none;
+  position: relative;
+  justify-content: flex-end;
+  border: 1px solid grey;
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 9rem;
+    background-color: #707070;
+    color: white;
+    font-size: .75rem;
+    line-height: 2rem;
+  }
+  & > div {
+    float: right;
+    textarea {
+      width: 100%;
+      resize: none;
+      border: none;
+      height: 120px;
+      &:focus {
+        border: none;
+      }
+      &:disabled{
+        cursor: not-allowed;
+        background-color: #E5E5E5 !important;;
+      }
+    }
+    textarea:disabled{
+      cursor: not-allowed;
+      background-color: #E5E5E5 !important;;
+    }
+  }
+}
+.attachFile {
+  .attachFile_body {
+    border: 1px dashed grey;
+    overflow: hidden;
+    color: white;
+    height: 7rem;
+    input{
+      height: 10rem;
+    }
+    .custom-file-label{
+      display: none;
+    }
+    .label_input > div{
+      width: 100%;
+    }
+    .label_textarea{
+      border: none;
+      height: 0;
+      width: 100%;
+    }
+    .attachFile_body_1{
+      label{
+        background-color: grey;
+        color: white;
+        width: 9rem;
+        height: 2rem;
+        font-size: 1rem;
+      }
+      .note{
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        color: grey;
+      }
+      .attachFile_body_btn{
+        z-index: 2;
+      }
+    }
+    label {
+      background-color: white;
+      color: grey;
+      text-align: left;
+      padding: 0.2rem 1rem;
+      font-size: 0.8vw;
+      width: 100%;
+      border: none;
+    }
+    button {
+      background-color: #44a5cc;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      width: 100%;
+      border-radius: 0;
+      height: 5rem;
+      text-align: center;
+      font-weight: 300;
+      z-index: -1;
+    }
+  }
+  .attachFile_filename {
+    font-size: 1.3rem;
+    i {
+      position: relative;
+      top: 0.2rem;
+      font-size: 1.6rem;
+      color: $header-color;
+    }
+    .fa-minus-circle {
+      color: grey;
+      cursor: pointer;
+    }
+    a {
+      color: $header-color;
+      font-size: 0.8rem;
+      text-decoration: underline;
+      margin: 0 .5rem;
+    }
+    .file{
+      max-width: 80%;
+    }
+  }
+}
+.table_payment {
+  font-size: 1rem;
+  border-spacing: 0.1rem;
+  border-collapse: separate;
+  th {
+    border-spacing: 1rem;
+    padding: 0.1rem 0;
+    margin: 0.3rem;
+    text-align: center;
+    height: 2rem;
+    &:not(:nth-child(1)) {
+      background-color: #707070;
+      border: 1px solid #707070;
+      color: white;
+    }
+  }
+  tr td {
+    border: 1px solid grey;
+    text-align: right;
+    padding: 0 .5rem;
+    height: 2rem;
+    width: 12rem;
+    &:nth-child(1) {
+      border: none;
+      text-align: center;
+      background-color: #707070;
+      border: 1px solid grey;
+      color: white;
+      width: 9rem;
+    }
+  }
+}
+
+.account_receivables_condition_table {
+  .main-vselect .vs__dropdown-toggle{
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+  }
+  overflow-x: hidden;
+  table{
+    overflow: auto;
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 0px;
+    border-collapse: separate;
+    border-spacing: 0px;
+    @extend .customScrollBar;
+    padding-bottom: 3rem;
+    transition: all .7s ;
+  }
+  tr th {
+    padding: 0.1rem;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    background-color: gray;
+    vertical-align: middle;
+    font-size: 0.7rem;
+    height: 2.3rem;
+    min-width: 5rem;
+    &:nth-child(2){
+      min-width: 3rem;
+    }
+  }
+  tr td {
+    width: auto;
+    padding: 0.2rem 0.2rem;
+    height: 2.5rem;
+    vertical-align: middle;
+    font-size: .8rem;
+    border-bottom: 1px solid #00000099;
+    input {
+      outline: none;
+      &:read-only {
+        border: none;
+        background-color: $readonly-color;
+      }
+    }
+    input,
+    select {
+      width: 100%;
+      padding: 0;
+      font-size: inherit;
+      border-radius: 0;
+      height: 2rem;
+      overflow: hidden;
+      border: 1px solid #ced4da;
+      white-space: nowrap;
+      text-overflow:ellipsis;
+      &:read-only {
+        background-color: $readonly-color;
+      }
+    }
+    &:nth-child(1) {
+      input {
+        background: none;
+        border: none;
+      }
+    }
+    .main-vselect .vs__selected-options input{
+      width: 0;
+    }
+    .vs--single .vs__selected {
+      height: 2rem;
+      padding: 0;
+      margin: 0;
+      line-height: 2rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      word-break: keep-all;
+      display: block;
+    }
+  }
+
+  i {
+    font-size: 1.3rem;
+    color: grey;
+  }
+  .searchproduct {
+    background-color: grey;
+    color: white;
+    height: 2rem;
+    font-size: inherit;
+    &:hover {
+      color: white !important;
+    }
+  }
+}
+.accountTable .vs__dropdown-menu{
+  max-height: 8rem;
+}
+.account_receivables_condition_action {
+  //padding-top: 3.8vh;
+  table tr th {
+    background-color: white;
+    border: none;
+  }
+  i {
+    font-size: 1.3rem;
+    margin: 0 0.5rem;
+    color: grey;
+    cursor: pointer;
+  }
+  table td{
+    border: none;
+  }
+  button{
+    background:none;
+  }
+}
+.size_sm {
+  width: 3rem !important;
+}
+.size_md {
+  width: 4rem !important;
+}
+.size_lg {
+  width: 5rem !important;
+}
+.size_xl {
+  width: 8rem !important;
+}
+.size_xxl {
+  width: 12rem !important;
+}
+.commentSidebar {
+  font-size: 0.7rem;
+  .b-sidebar {
+    top: auto;
+    bottom: 0;
+    width: 18vw;
+    height: calc(100vh - 4rem) !important;
+    background-color: grey !important;
+    color: white !important;
+    transition: all 0.7s;
+    font-size: 1.7vh;
+    .commentSidebar-header {
+      height: 4.5rem;
+      @include reponsivelm(3.5rem,null,null,null);
+      border-bottom: 1px solid white;
+      a {
+        padding: 0.2rem 0.7rem;
+        margin: 0.1rem 0;
+        color: $header-color;
+        font-weight: 700;
+        margin: 0;
+        background-color: white;
+      }
+      i {
+        padding: 0.26rem;
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: white;
+        color: grey;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+    }
+    .commentSidebar-content {
+      height: 15rem;
+      textarea {
+        font-size: 0.7rem;
+        resize: none;
+      }
+      .form-check {
+        padding-left: .6rem;
+        input {
+          padding: 1rem !important;
+          height: 1.3rem;
+          width: 1.3rem;
+        }
+        label {
+          line-height: 1.3rem;
+          cursor: pointer;
+          padding-left: .5rem;
+          padding-top: .27rem;
+          font-size: 0.7rem;
+          @include reponsivelm(null,null,null,.6rem)
+        }
+      }
+    }
+    .commentSidebar_handle {
+      height: 8%;
+      button {
+        font-size: 1.4vh;
+        padding: 0.6vh;
+        height: 6vh;
+        background-color: $header-color;
+      }
+      border-bottom: 1px solid white;
+    }
+    .commentSidebar_user {
+      @extend .customScrollBar;
+      height: calc(92% - 20.5rem);
+      @include reponsivelm(calc(92% - 19.5rem), null,null, null);
+      overflow-y: auto;
+      .commentSidebar_user_item {
+        height: 6rem;
+        background-color: white;
+        color: grey;
+        font-size: 0.8rem;
+        i {
+          font-size: 1.2rem;
+        }
+      }
+      .fa-trash-alt{
+        cursor: pointer;
+      }
+    }
+  }
+}
+//popup search product
+.searchproductPopup {
+  .supplieName {
+    font-size: 1.25rem;
+    text-decoration: underline;
+  }
+  .label_input {
+    background: none;
+    label {
+      min-width: 6rem;
+      width: 6rem;
+      color: black;
+      text-align: right;
+      padding-right: 5px;
+      font-size: 1rem;
+    }
+    & > div {
+      width: 12.5rem;
+      min-width: 12.5rem;
+      height: 1.875rem;
+    }
+    input{
+      background: #FFFFFF 0% 0% no-repeat padding-box;;
+    }
+  }
+  .label_input1{
+    label{
+      min-width: 6rem;
+      width: 6rem;
+    }
+    & > div {
+      width: 5rem;
+      min-width: 5rem;
+      select{
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 1rem;
+      }
+    }
+  }
+  .searchSupplieBtn  button {
+    padding: 1rem 0;
+    text-align: center;
+    width: 8rem;
+  }
+  .search_record {
+    @extend .customScrollBar;
+    height: 50vh;
+    overflow-y: auto;
+  }
+}
+//approve request dialog
+.approveDialog {
+  font-size: 1rem;
+  padding: 4% 12%;
+  .approveDialog_nav {
+    padding: 2rem;
+    background-color: $readonly-color;
+    justify-content: center;
+  }
+  .approveDialog_item {
+    background-color: white;
+    height: 4rem;
+    width: 6rem;
+    padding: 0 0.3rem;
+    cursor: pointer;
+    i {
+      font-size: 1.4rem;
+    }
+    .fa-user-alt {
+      font-size: 1.8rem;
+      margin-right: 0.2rem;
+    }
+    .approveIcon1 {
+      color: $header-color;
+    }
+    .documnetIcon {
+      margin-left: 15%;
+    }
+  }
+  .approveDialog_next {
+    padding: 0 0.5rem;
+    width: 1.7rem;
+    text-align: center;
+    i {
+      line-height: 4rem;
+    }
+  }
+  .approveDialog_comment {
+    textarea {
+      resize: none;
+      width: 100%;
+    }
+  }
+  .btn_handle {
+    button {
+      padding: 1rem 4rem;
+      color: $header-color;
+      background-color: white;
+      border: 1px solid $header-color;
+
+      margin: 1rem 1rem 0 0;
+      font-size: 1.4rem;
+    }
+    .btn_handle_apply {
+      background-color: $header-color;
+      color: white;
+      margin-right: 0;
+    }
+  }
+}
+
+.userAssignClass {
+  .tooltip-inner {
+    width: 11vw !important;
+    height: 24vh !important;
+    max-width: 100vw !important;
+    background-color: $header-color;
+    color: white;
+    max-width: 10rem;
+    width: 5rem;
+    overflow-y: auto;
+  }
+  .arrow:before {
+    border-bottom-color: $header-color;
+  }
+}
+
+.btnForRequest {
+  position: fixed;
+  bottom: 3%;
+  z-index: 3;
+  width: 100%;
+  button{
+    padding: .5rem 1.5rem;
+    margin-left: 2%;
+    width: 10rem;
+    height: 4.5rem;
+  }
+}
+.searchRequestPopup{
+  input{
+    height: 4vh !important;
+  }
+  .main-vselect .vs__dropdown-toggle{
+    height: 4vh !important;
+    span{
+      font-weight: 300;
+      font-size: 1.1rem;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      margin-left: -5px;
+    }
+
+    input {
+      height: 100% !important;
+      margin: 0;
+    }
+
+    .vs__actions {
+      height: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.searchRequestPopupModify {
+
+  input,
+  .main-vselect,
+  .main-vselect .vs__dropdown-toggle,
+  .main-vselect .vs__selected-options {
+    height: 1.875rem !important;
+  }
+
+  .main-vselect .vs__dropdown-toggle input {
+    height: 1.8125rem !important;
+  }
+
+}
+
+// css for request-list in-process, all, send-back, reject, create, approver, apply
+.searching-before-inputting_header {
+  border-bottom: 1px solid grey;
+  position: relative;
+
+  .nav-item {
+    margin-bottom: -1px;
+    width: 7.5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    height: auto;
+    &:first-child {
+      margin-left: 4rem;
+    }
+    a {
+      border: 1px solid;
+      border-bottom: none;
+      border-color: grey !important;
+      border-radius: 0;
+      color: grey;
+      height: 100%;
+      white-space: nowrap;
+    }
+  }
+
+  .select_filter {
+    width: 20rem !important;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0 !important;
+   
+    .custom-select {
+      border-width: 0;
+      border-radius: 0;
+      font-weight: 500;
+      background-color: #E5E5E5 !important;
+      width: 11rem;
+
+      &:nth-child(2) {
+        width: 5rem;
+      }
+    }
+  }
+
+  .w_tab {
+    margin-right: 3%;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.searching-before-inputting_content {
+  padding: 1% 0%;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  .searchSupplyName {
+    padding: 0.3vw 0.5vw;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+  .create_new {
+    background-color: #44a5cc;
+    color: white;
+    padding: 1vw;
+  }
+
+  .body_padding_inputting_content {
+    padding: 0 1rem;
+
+    .controller_list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 1.4rem;
+      padding: 0rem 4rem;
+      padding-top: 1rem;
+      height: auto;
+
+      button {
+        padding: 0.7rem 2rem;
+        width: 10rem;
+        height: 4rem;
+        margin: 0 1vw;
+      }
+
+      .show_condition_filter {
+        max-width: 40rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.tooltip .tooltip-inner {
+  padding: 6px 8px !important;
+  background-color: #E5E5E5 !important;
+  color: #000 !important;
+  border-radius: 0 !important;
+  font-weight: 700 !important;
+  font-size: 1.2rem !important;
+  max-width: 30rem !important;
+}
+
+.tooltip.bs-tooltip-top .arrow::before {
+  border-top-color: #E5E5E5 !important;
+}
+
+.tooltip.bs-tooltip-right .arrow::before {
+  border-right-color: #E5E5E5 !important;
+}
+
+.tooltip.bs-tooltip-left .arrow::before {
+  border-left-color: #E5E5E5 !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: #E5E5E5 !important;
+}
+
+.table_payment_1 {
+  tr td{
+    padding: 0;
+  }
+  input {
+    border: none;
+    width: 100%;
+    padding: 0 .4rem !important;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.validInitialField{
+  input{
+    background-color: $color-yellow;
+  }
+}
+.validInitialFieldTable{
+  div,input{
+    background-color: $color-yellow;
+  }
+}
+.mx-input:disabled, .mx-input.disabled{
+  color: black;
+  background: #E5E5E5 0% 0% no-repeat padding-box !important;
+  background-color: #E5E5E5 ;
+}
